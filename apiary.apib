@@ -1,0 +1,71 @@
+FORMAT: 1A
+
+# Cars
+
+This is the Cars API.  It supports the Sale and Service of Cars.  It will capture warranty claims.
+
+## Cars Collection [/cars]
+
+### List All Cars [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "Company": "Toyota",
+                "Make": "Toyota",
+                "Model": "Crown",
+                "Color": "Red",
+                "Year": "2018"
+            },
+            {
+                "Company": "Toyota",
+                "Make": "Lexus",
+                "Model": "LS",
+                "Color": "Gold",
+                "Year": "2017"
+            },
+        ]
+
+### Create a New Car [POST]
+
+Every year, car companies deliver car models/years and we need to be able to add them to the system
+
++ Request (application/json)
+
+        {
+                "Company": "Toyota",
+                "Make": "Toyota",
+                "Model": "Crown",
+                "Color": "Red",
+                "Year": "2018",
+                "Company Official": "Kodai"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
